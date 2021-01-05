@@ -55,3 +55,7 @@ var timeOfSec;
 var seconds;
 var gamePoints = 0;
 var viewHighScore = document.querySelector(".score");
+var resultForm;
+var inputText;
+var displayResult;
+var submitButton;
