@@ -36,3 +36,22 @@ var questions = [
         options: ["Javascript", "None of these", "Jazzscript", "Joinscript"]
     }
 ];
+
+
+/**
+ * Main program starts from here 
+ */
+
+var startQuiz = document.querySelector("#start");
+var ques = document.querySelector(".question");
+var questionCounter = 0;
+var nextQuestion = document.querySelector("#next-question");
+var iconCorrect = document.createElement("i");
+var iconWrong = document.createElement("i");
+var correctAnswer;
+var select;
+var timerSecond = document.querySelector("header .quiz-time .second");
+var timeOfSec;
+var seconds;
+var gamePoints = 0;
+var viewHighScore = document.querySelector(".score");
