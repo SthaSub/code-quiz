@@ -227,3 +227,31 @@ function submitResult() {
 
 //result page class selector
 var resultPage = document.querySelector(".result");
+
+//prepare to display final score with name, and takes the action back or clear as per user will
+function highScore() {
+    var back = document.createElement("button");
+    var resultBtnGrp = document.querySelector(".result-btn-grp");
+    back.className = "btn btn-primary";
+    back.setAttribute("id", "next-question");
+    back.textContent = "BACK";
+    var clearHighScore = document.createElement("button");
+    clearHighScore.className = "btn btn-outline-primary";
+    clearHighScore.setAttribute("id", "start");
+    clearHighScore.textContent = "CLEAR HIGHSCORE";
+    resultPage.innerHTML = ""; //clearing any default elements which can be persist during highscore presentation.
+    var highscore = document.createElement("table");
+    highscore.className = "table table-striped";
+    highscore.innerHTML = "<tr>" + "<th scope=\"col\" >" + "#" + "</th>" + "<th scope=\"col\">" + "Highscore" + "</th>"+
+        "<th scope=\"col\">" + "Player Name" + "</th>" + "</tr>" + viewScore("finalHighscore");
+    resultPage.append(highscore);
+    resultBtnGrp.append(back);
+    resultBtnGrp.append(clearHighScore);
+    back.addEventListener("click", function () {
+        location.href = "./index.html"; //redirect to index page
+    });
+    clearHighScore.addEventListener("click", function () {
+        localStorage.clear(); //clears the localstorage data
+        location.reload(); //refresh the current after event executes
+    });
+}
