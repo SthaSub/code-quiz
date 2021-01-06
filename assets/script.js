@@ -210,3 +210,17 @@ function prepareDisplay() {
 
 //get the total keys length form local storage.
 var keyCounter = Object.keys(localStorage).length;
+
+//final submit score on local storage
+function submitResult() {
+    submitButton.addEventListener("click", function () {
+        var input = document.querySelector("input");
+        if (input.value === "") {//displays alert if nothing entered on player name text field
+            alert("Enter your name please!");
+            return false;
+        } else {
+            localStorage.setItem(keyCounter++, JSON.stringify({ name: inputText.value, value: gamePoints })); //insert the current score with player set name
+            location.href = "./result.html";
+        }
+    });
+}
