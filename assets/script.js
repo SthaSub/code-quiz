@@ -207,3 +207,6 @@ function prepareDisplay() {
     resultForm.appendChild(submitButton);
     ques.append(resultForm);
 }
+
+//get the total keys length form local storage.
+var keyCounter = Object.keys(localStorage).length;
