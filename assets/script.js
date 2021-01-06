@@ -11,29 +11,29 @@ var questions = [
     },
     {
         key: 2,
-        question: "Q2. What is Fullform of CSS?",
-        answer: "Cascading Style Sheet",
-        options: ["None of these", "Code Style Sheet", "Cascade Short Sheet ", "Cascading Style Sheet"]
+        question: "Q2. What is fullform of CSS, and JS?",
+        answer: "Cascading Style Sheet, and Javascript",
+        options: ["None of these", "Code Style Sheet, and Joinscript", "Cascade Short Sheet, and Javascript ", "Cascading Style Sheet, and Javascript"]
 
     },
     {
         key: 3,
-        question: "Q3. What is the Fullform of GMAIL?",
-        answer: "Google Mail",
-        options: ["None of these", "Gadget Mailing", "Google Mail", "Go Mail"]
+        question: "Q3. In javascript object consists of ?",
+        answer: "key/value or key/property",
+        options: ["None of these", "key/value or key/property", "value", "primitive datatype"]
 
     },
     {
         key: 4,
-        question: "Q4. What is the Fullform of OS?",
-        answer: "Operating System",
-        options: ["Operation System", "Operating System", "Opcode System", "None of these"]
+        question: "Q4. Control flow statement are ",
+        answer: "while, for, and do-while",
+        options: ["while, for, and do-while", "if-else, and if-elseif-else", "switch-case", "None of these"]
     },
     {
         key: 5,
-        question: "Q5. What is the fullform of JS",
-        answer: "Javascript",
-        options: ["Javascript", "None of these", "Jazzscript", "Joinscript"]
+        question: "Q5. Which datatypes allows only one of two possible values?",
+        answer: "boolean",
+        options: ["boolean", "None of these", "int", "char"]
     }
 ];
 
