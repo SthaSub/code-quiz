@@ -31,7 +31,7 @@ var questions = [
     },
     {
         key: 5,
-        question: "Q5. Which datatypes allows only one of two possible values?",
+        question: "Q5. Which datatype has only one of two possible values?",
         answer: "boolean",
         options: ["boolean", "None of these", "int", "char"]
     }
