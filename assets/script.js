@@ -174,3 +174,14 @@ function secondTime() {
         }
     }
 }
+
+/**
+ * prepares the curent challenge result
+ */
+function result() {
+    nextQuestion.style.visibility = "hidden";
+    var quizTimer = document.querySelector(".quiz-time");
+    quizTimer.style.visibility = "hidden";
+    prepareDisplay();
+    submitResult();
+}
