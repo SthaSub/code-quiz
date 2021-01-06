@@ -67,3 +67,42 @@ function start(event) {
     event.preventDefault();
     location.href = "./quiz.html";
 }
+
+/**
+ * this control function prepares the quiz challenge   
+ */
+function show() {
+    clearInterval(timeOfSec);
+    //counts question upto 5
+    if (questionCounter == 5) {
+        result();
+    } else {
+        correctAnswer = "";
+        if (ques.lastChild !== null) { // prevents the appending the question in same page by clearing prevoius question
+            ques.innerHTML = "";
+        }
+        var h2 = document.createElement("h2");
+        var ul = document.createElement("ul");
+        ul.className = "opt-grp";
+        for (var i = 0; i < questions[questionCounter].options.length; i++) {
+            var li = document.createElement("li");
+            li.className = "option";
+            li.textContent = questions[questionCounter].options[i];
+            ul.append(li);
+        }
+        h2.textContent = questions[questionCounter].question;
+        correctAnswer = questions[questionCounter].answer;
+        ques.append(h2);
+        ques.append(ul);
+        select = document.querySelectorAll("li.option");
+        for (i = 0; i < select.length; i++) {
+            select[i].addEventListener("click", selectedOption);
+        }
+        questionCounter++;
+        if (questionCounter > 0)
+            timer(20);  // after 1st question, next rest of the questions start from 20 sec.
+        else
+            timer(19); //first question starts from 19 sec because 20 sec already persist on page
+    }
+
+}
