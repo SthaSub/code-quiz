@@ -185,3 +185,25 @@ function result() {
     prepareDisplay();
     submitResult();
 }
+/**
+ * prepares the total score page and input text
+ */
+function prepareDisplay() {
+    ques.innerHTML = ""; // clears the page for next question to be displayed
+    resultForm = document.createElement("form");
+    inputText = document.createElement("input");
+    displayResult = document.createElement("div");
+    submitButton = document.createElement("button");
+    displayResult.textContent = "Your final score: " + gamePoints + " - "; //prepares the final score of player
+    inputText.setAttribute("type", "text");
+    inputText.setAttribute("name", "playerName");
+    inputText.setAttribute("placeholder", "write your name here.");
+    submitButton.setAttribute("type", "button");
+    submitButton.setAttribute("id", "result");
+    submitButton.className = "btn btn-primary";
+    submitButton.textContent = "submit";
+    resultForm.appendChild(displayResult);
+    resultForm.appendChild(inputText);
+    resultForm.appendChild(submitButton);
+    ques.append(resultForm);
+}
