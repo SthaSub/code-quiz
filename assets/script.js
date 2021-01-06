@@ -141,3 +141,13 @@ function selectedOption(event) {
         ques.childNodes[1].children[j].classList.add("disabled");
     }
 }
+
+
+/**
+ * 
+ * gets the total each question time in second as argument, invokes the timer function   
+ */
+function timer(time) {
+    seconds = time;
+    timeOfSec = setInterval(secondTime, 1000);
+}
