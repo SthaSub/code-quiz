@@ -224,3 +224,6 @@ function submitResult() {
         }
     });
 }
+
+//result page class selector
+var resultPage = document.querySelector(".result");
