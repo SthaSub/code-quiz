@@ -11,21 +11,21 @@ var questions = [
     },
     {
         key: 2,
-        question: "Q2. What is fullform of CSS, and JS?",
+        question: "Q2. What is the fullform of CSS, and JS?",
         answer: "Cascading Style Sheet, and Javascript",
         options: ["None of these", "Code Style Sheet, and Joinscript", "Cascade Short Sheet, and Javascript ", "Cascading Style Sheet, and Javascript"]
 
     },
     {
         key: 3,
-        question: "Q3. In javascript object consists of ?",
+        question: "Q3. In javascript object consists of __",
         answer: "key/value or key/property",
         options: ["None of these", "key/value or key/property", "value", "primitive datatype"]
 
     },
     {
         key: 4,
-        question: "Q4. Control flow statement are ",
+        question: "Q4. Control flow statement are __",
         answer: "while, for, and do-while",
         options: ["while, for, and do-while", "if-else, and if-elseif-else", "switch-case", "None of these"]
     },
