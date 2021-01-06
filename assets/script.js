@@ -59,3 +59,11 @@ var resultForm;
 var inputText;
 var displayResult;
 var submitButton;
+
+/**
+ * direct the quiz page after start button pressed 
+ */
+function start(event) {
+    event.preventDefault();
+    location.href = "./quiz.html";
+}
