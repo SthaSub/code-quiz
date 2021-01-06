@@ -3,48 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Code Quiz</title>
+    <title>quiz-app</title>
+    <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+    <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
     ></script>
     <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css"
+      integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/assets/style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
-    <header class="centre">Quiz Challenge</header>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quam
-          laborum nulla culpa ipsa illum ducimus placeat vero. Neque est
-          consequatur ut officiis dolorum dicta? Quasi accusamus pariatur
-          explicabo ullam?
-          <i class="far fa-home"></i>
+    <main class="welcome-box">
+      <header class="index-quiz-title">Quiz Challenge</header>
+      <section>
+        <h2>rules & conditions</h2>
+        <ul>
+          <li>There will be 5 questions.</li>
+          <li>For each question you will have <strong>20</strong> seconds to answer.</li>
+          <li>Cannot return once you click <Strong>Next</Strong>.</li>
+          <li>Final score will be displayed after finishing quiz.</li>
+          <li>
+            There will be no option for quitting quiz in the middle of the
+            Challenge.
+          </li>
+          <li>
+            Wrong answer will be indicated by icon <i class="fas fa-times-square"> red colour</i>, and Correct answer by icon
+            <i class="fas fa-check-square"> green colour</i>.
+          </li>
+          <li>Once you complete the quiz, you can submit final score, and play new challenge or close the challenge.</li>
+        </ul>
+        <div class="btn-grp">
+          <button type="button" id="start" class="btn btn-outline-primary">
+            START
+          </button>
+          <!-- <button type="button" id="rules" class="btn btn-outline-primary">Rules</button>          </div> -->
         </div>
-      </div>
-      <div class="row" id="line">
-        <div class="col-6 justify-content-end d-flex">
-          <button type="button" class="btn btn-primary">START</button>
-        </div>
-        <div class="col-6">
-            <button type="button" class="btn btn-primary">RULES</button>
-        </div>
-      </div>
+      </section>
+    </main>
+    <!-- javascript link -->
+    <script
+      src="./assets/script.js"
+    ></script>
   </body>
 </html>
