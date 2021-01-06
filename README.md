@@ -7,7 +7,7 @@ This web application includes three html pages index, quiz ,result. index page i
 
 # deployment
 This application is deployed on github pages, 
-to see running application simply go through this link : [code quiz](https://sthasub.github.io/password-generator/)
+to see running application simply go through this link : [code quiz](https://sthasub.github.io/code-quiz/)
 
 # screenshots
 Application overview showing numbers of steps to achieve random secure password
