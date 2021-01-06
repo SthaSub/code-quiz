@@ -106,3 +106,38 @@ function show() {
     }
 
 }
+/**
+ * this function performs to check the time, and user selected the option, generates the result as per selection on screen
+ */
+function selectedOption(event) {
+    clearInterval(timeOfSec);
+    var selectedAns = event.target.textContent;
+    // if selected option is right then displays the green colour with right check
+    if (selectedAns == correctAnswer) {
+        for (var i = 0; i < select.length; i++) {
+            if (select[i].textContent == correctAnswer) {
+                select[i].classList.add("correct");
+                iconCorrect.className = "fas fa-check-square"; //right check icon
+                select[i].append(iconCorrect);
+                gamePoints += 5;
+            }
+        }
+    } else {
+        //shows wrong by icon and colour, and displays correct answer also stops the time.
+        var wrong = event.target;
+        wrong.classList.add("wrong");
+        iconWrong.className = "fas fa-times-square"; //wrong check icon
+        wrong.append(iconWrong);
+        for (var k = 0; k < select.length; k++) {
+            if (select[k].textContent == correctAnswer) {
+                select[k].classList.add("correct");
+                iconCorrect.className = "fas fa-check-square"; //right check icon
+                select[k].append(iconCorrect);
+            }
+        }
+    }
+    //disabled selection of options when time off
+    for (var j = 0; j < ques.childNodes[1].children.length; j++) {
+        ques.childNodes[1].children[j].classList.add("disabled");
+    }
+}
