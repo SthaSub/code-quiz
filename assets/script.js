@@ -295,3 +295,19 @@ function viewScore(args) {
 
     return finalDisplay;
 }
+
+//checks whether quiz html is active or not, if not then shows the index html or prepare to show the result page
+if (startQuiz !== null)
+    startQuiz.addEventListener("click", start);
+else if (ques !== null)
+    show();
+else
+    highScore();
+
+//prevents the invokes of nextquestion during the start of game    
+if (nextQuestion !== null)
+    nextQuestion.addEventListener("click", show);
+
+//allows to active after starting game
+if (viewHighScore !== null)
+    viewHighScore.addEventListener("click", viewScore);
