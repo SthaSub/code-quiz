@@ -151,3 +151,26 @@ function timer(time) {
     seconds = time;
     timeOfSec = setInterval(secondTime, 1000);
 }
+
+/**
+ * activates the timer for each queston during challenge
+ */
+function secondTime() {
+    timerSecond.textContent = seconds;
+    seconds--;
+    if (seconds < 0) {
+        clearInterval(timeOfSec);
+        //displays the correct answer when after time off
+        for (var i = 0; i < select.length; i++) {
+            if (select[i].textContent == correctAnswer) {
+                select[i].classList.add("correct");
+                iconCorrect.className = "fas fa-check-square"; //right check icon
+                select[i].append(iconCorrect);
+            }
+        }
+        //disabled selection of options when time off
+        for (var j = 0; j < ques.childNodes[1].children.length; j++) {
+            ques.childNodes[1].children[j].classList.add("disabled");
+        }
+    }
+}
