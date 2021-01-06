@@ -255,3 +255,43 @@ function highScore() {
         location.reload(); //refresh the current after event executes
     });
 }
+
+/**
+ * this function prompts the high score with player name 
+ */
+function viewScore(args) {
+    var length = localStorage.length;
+    var store = [];
+    var valueObj = {};
+    //storing json oject into valueObj object
+    for (var i = 0; i < length; i++) {
+        valueObj = JSON.parse(localStorage.getItem(localStorage.key(i)));
+        store[i] = {
+            name: valueObj.name,
+            score: valueObj.value
+        };
+    }
+    //return high value first by comparesion
+    var result = store.sort(function (a, b) {
+        return b.score - a.score;
+    });
+    var finalDisplay = "";
+    //final display on alert
+    for (var j = 0; j < result.length; j++) {
+        if (j < 5) // limiting score and playername display upto 5 
+        {
+            if (args == "finalHighscore")
+                finalDisplay = finalDisplay + " <tr> " +
+                    "<td>" + (j + 1) + ". " + "</td>" +
+                    "<td>" + result[j].score + "</td>" +
+                    "<td>" + result[j].name + "</td>" +
+                    "</tr>";
+            else finalDisplay = finalDisplay + (j + 1) + ". " + result[j].score + " ( " + result[j].name + " )" + "\n";
+        }
+    }
+    //prevents executing alert automatically during final result page
+    if (args != "finalHighscore")
+        alert("TOP  FIVE  HIGH   SCORE \n**************************\n" + finalDisplay);
+
+    return finalDisplay;
+}
